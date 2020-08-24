@@ -1,0 +1,12 @@
+version: '2'
+services:
+  openfire:
+    image: r34l1v3/gizmotronic-openfire
+    ports:
+      - "9090:9090/tcp"
+      - "9091:9091/tcp"
+      - "5222:5222/tcp"
+      - "7777:7777/tcp"
+    volumes:
+      - /srv/docker/openfire/data:/var/lib/openfire
+      - /srv/docker/openfire/logs:/var/log/openfire
